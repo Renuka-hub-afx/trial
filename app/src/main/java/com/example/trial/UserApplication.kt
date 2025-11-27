@@ -5,12 +5,12 @@ import com.example.trial.data.UserDatabase
 import com.example.trial.data.UserRepository
 
 class UserApplication : Application() {
+    lateinit var repository: UserRepository
+        private set
 
-    // 1. Initialize the Database lazily (only when first needed)
-    // "by lazy" means it won't be created until you actually ask for it
-    private val database by lazy { UserDatabase.getDatabase(this) }
-
-    // 2. Initialize the Repository lazily
-    // The repository needs the 'userDao' from the database we just created
-    val repository by lazy { UserRepository(database.userDao()) }
+    override fun onCreate() {
+        super.onCreate()
+        val db = UserDatabase.getInstance(this)
+        repository = UserRepository(db.userDao())
+    }
 }

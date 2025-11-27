@@ -5,13 +5,14 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.trial.model.User
 
 @Dao
 interface UserDao {
 
-    @Query("SELECT * FROM user_table WHERE user_email = :email")
-    fun getUserByEmail(email: String): LiveData<User>
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    suspend fun insertUser(user: User): Long
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(user: User)
+    @Query("SELECT * FROM users WHERE email = :email LIMIT 1")
+    fun getUserByEmail(email: String): LiveData<User?> // LiveData so ViewModel can observe
 }

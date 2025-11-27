@@ -1,14 +1,15 @@
 package com.example.trial.data
 
 import androidx.lifecycle.LiveData
+import com.example.trial.model.User
 
-class UserRepository(private val userDao: UserDao) {
+class UserRepository(private val dao: UserDao) {
 
-    fun getUserByEmail(email: String): LiveData<User> {
-        return userDao.getUserByEmail(email)
+    suspend fun insertUser(user: User): Long {
+        return dao.insertUser(user)
     }
 
-    suspend fun insert(user: User) {
-        userDao.insert(user)
+    fun getUserByEmail(email: String): LiveData<User?> {
+        return dao.getUserByEmail(email)
     }
 }
