@@ -12,32 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Trial">
-
+        <activity
+            android:name=".homepage"
+            android:exported="false" />
         <!-- Sign Up Activity -->
         <activity
             android:name=".SignupActivity"
-            android:exported="false" />
-
-        <!-- Login Activity -->
+            android:exported="false" /> <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-
-        <!-- Home Page -->
+            android:exported="false" /> <!-- Home Page -->
         <activity
-            android:name=".HomePage"
-            android:exported="false" />
-
-        <!-- Main Entry Activity -->
+            android:name=".homepage"
+            android:exported="false"
+            tools:ignore="DuplicateActivity,MissingClass" /> <!-- Main Entry Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
