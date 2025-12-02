@@ -1,4 +1,4 @@
-package com.example.trial
+package com.example.Swasthyamitra
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

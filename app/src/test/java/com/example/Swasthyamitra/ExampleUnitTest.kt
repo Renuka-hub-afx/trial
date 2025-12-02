@@ -1,4 +1,4 @@
-package com.example.trial
+package com.example.Swasthyamitra
 
 import org.junit.Test
 

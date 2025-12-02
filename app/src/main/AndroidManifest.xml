@@ -14,18 +14,14 @@
         android:theme="@style/Theme.Trial">
         <activity
             android:name=".homepage"
-            android:exported="false" />
-        <!-- Sign Up Activity -->
+            android:exported="false"
+            tools:ignore="DuplicateActivity,MissingClass" />
         <activity
             android:name=".SignupActivity"
-            android:exported="false" /> <!-- Login Activity -->
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" /> <!-- Home Page -->
-        <activity
-            android:name=".homepage"
-            android:exported="false"
-            tools:ignore="DuplicateActivity,MissingClass" /> <!-- Main Entry Activity -->
+            android:exported="false" /> <!-- Main Entry Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

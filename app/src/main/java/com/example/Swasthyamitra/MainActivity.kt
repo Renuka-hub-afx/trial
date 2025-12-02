@@ -1,4 +1,4 @@
-package com.example.trial
+package com.example.Swasthyamitra
 
 import android.content.Intent
 import android.graphics.LinearGradient

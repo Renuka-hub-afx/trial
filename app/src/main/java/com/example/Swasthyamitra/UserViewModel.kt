@@ -1,11 +1,11 @@
-package com.example.trial.viewmodel
+package com.example.Swasthyamitra.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.trial.data.UserRepository
-import com.example.trial.model.User
+import com.example.Swasthyamitra.data.UserRepository
+import com.example.Swasthyamitra.model.User
 import kotlinx.coroutines.launch
 
 class UserViewModel(private val repo: UserRepository) : ViewModel() {

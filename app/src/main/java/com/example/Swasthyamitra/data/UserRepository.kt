@@ -1,7 +1,7 @@
-package com.example.trial.data
+package com.example.Swasthyamitra.data
 
 import androidx.lifecycle.LiveData
-import com.example.trial.model.User
+import com.example.Swasthyamitra.model.User
 
 class UserRepository(private val dao: UserDao) {
 
