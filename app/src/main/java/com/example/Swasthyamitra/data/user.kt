@@ -1,4 +1,4 @@
-package com.example.Swasthyamitra.model
+package com.example.trial.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

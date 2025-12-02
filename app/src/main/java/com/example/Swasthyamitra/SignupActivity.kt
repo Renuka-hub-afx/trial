@@ -1,7 +1,3 @@
-package com.example.Swasthyamitra
-
-
-
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -10,10 +6,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.Swasthyamitra.databinding.ActivitySignupBinding
-import com.example.Swasthyamitra.model.User
-import com.example.Swasthyamitra.viewmodel.UserViewModel
-import com.example.Swasthyamitra.viewmodel.UserViewModel.UserViewModelFactory
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -35,7 +27,6 @@ class SignupActivity : AppCompatActivity() {
         val factory = UserViewModelFactory(application.repository)
         userViewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
 
-        // Hide inline DatePicker if present
         binding.datePicker1?.visibility = View.GONE
 
         // Open popup DatePicker
@@ -98,7 +89,6 @@ class SignupActivity : AppCompatActivity() {
 
         // Create User object
         val user = User(
-            userName = name,
             email = email,
             password = pass,
             birthDate = dob
@@ -109,9 +99,7 @@ class SignupActivity : AppCompatActivity() {
             runOnUiThread {
                 Toast.makeText(this, "Signup Successful!", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
-                finish()
             }
         }
     }

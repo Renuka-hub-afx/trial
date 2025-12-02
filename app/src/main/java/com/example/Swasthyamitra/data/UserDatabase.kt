@@ -1,10 +1,10 @@
-package com.example.Swasthyamitra.data
+package com.example.trial.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.Swasthyamitra.model.User
+import com.example.trial.model.User
 
 @Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {

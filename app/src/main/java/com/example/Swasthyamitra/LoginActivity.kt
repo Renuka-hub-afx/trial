@@ -1,5 +1,3 @@
-package com.example.Swasthyamitra
-
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -12,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
-import com.example.Swasthyamitra.viewmodel.UserViewModel
-import com.example.Swasthyamitra.viewmodel.UserViewModel.UserViewModelFactory
 
 class LoginActivity : AppCompatActivity() {
 
@@ -76,8 +72,6 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this, "Incorrect password!", Toast.LENGTH_SHORT).show()
                     }
                 } else {
-                    Toast.makeText(this, "User not found! Please sign up.", Toast.LENGTH_SHORT)
-                        .show()
                 }
             }
         }
@@ -90,7 +84,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun navigateToHomePage(userId: Long) {
-        val intent = Intent(this, homepage()::class.java)
         intent.putExtra("USER_ID", userId)
         startActivity(intent)
         finish()

@@ -1,11 +1,11 @@
-package com.example.Swasthyamitra.data
+package com.example.trial.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.Swasthyamitra.model.User
+import com.example.trial.model.User
 
 @Dao
 interface UserDao {
